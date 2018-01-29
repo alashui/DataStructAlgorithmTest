@@ -4,9 +4,15 @@
 using namespace std;
 
 //implement of algorithm
-unsigned long fibnacci(const unsigned long &n) 
+unsigned long fibnacci(unsigned long &n) 
 {
-	return n<2 ? n : fibnacci(n-1) + fibnacci(n-2);
+	unsigned long fib_n(0),fib_n_1(1);
+	while(n--)
+	{
+		fib_n = fib_n +fib_n_1;
+		fib_n_1 = fib_n - fib_n_1;
+	}
+	return fib_n;
 }
 
 int main(int argc, char** argv)

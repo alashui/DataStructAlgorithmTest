@@ -9,15 +9,20 @@ void myalgorithm()
 	
 }
 
-int main()
+int main(int argc, char** argv)
 {	
+ 	if ( argc != 2 )
+    {
+        cout<<"please input parameter!"<<endl;
+        return 1;
+    }
 	//variables use to compute the time of algorithm spend
 	struct timespec tpstart;
     struct timespec tpend;	
     ////
     
     //data and variables input to algorithm
-    
+    string string_temp(argv[1]);
     ////
     
     //run myalgorithm() and compute the time of that spend
